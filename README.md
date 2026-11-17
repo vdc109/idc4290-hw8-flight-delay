@@ -20,13 +20,19 @@ Open the local URL printed by Streamlit. The app needs no API key and no raw fli
 
 The prediction form accepts dates from January 1 through March 31, 2026, the period covered by the source data. Scheduled departure and arrival times are each local to their airport. Duration and distance must be the scheduled values for the selected flight. The prefilled example is AA, ABQ to DFW, March 1, 2026, 05:00 to 07:58, 118 minutes, 569 miles.
 
-## Deploy
+## Deploy on Render with access limited to this repository
 
-1. Push this folder to a GitHub repository. Keep `app.py`, `predictor.py`, `requirements.txt`, `data/`, and `model/` together at repository root.
-2. Sign in at [Streamlit Community Cloud](https://share.streamlit.io/) and connect the GitHub repository.
-3. Select the repository and branch, set the main file to `app.py`, and deploy.
-4. Make the app public and test its URL in a private browser window before submitting it.
-5. Put the deployed URL in `SUBMISSION.md`.
+The source repository is https://github.com/vdc109/idc4290-hw8-flight-delay.
+
+1. Sign in at [Render](https://dashboard.render.com/) and choose **New → Web Service**.
+2. When GitHub asks which repositories Render may access, choose **Selected Repositories** and select only `vdc109/idc4290-hw8-flight-delay`.
+3. Select that repository, branch `main`, runtime **Python**, and instance type **Free**.
+4. Use build command `pip install -r requirements.txt`.
+5. Use start command `streamlit run app.py --server.address 0.0.0.0 --server.port $PORT --server.headless true`.
+6. Create the service. The repository's `.python-version` file pins Python 3.12. No secrets or environment variables are needed.
+7. Test the public `onrender.com` URL in a private browser window and add it to `SUBMISSION.md`.
+
+The `render.yaml` file contains these service settings if you prefer Render Blueprints. Render's free web services spin down after inactivity; the first visit after idle may take about a minute.
 
 ## Source and limitations
 

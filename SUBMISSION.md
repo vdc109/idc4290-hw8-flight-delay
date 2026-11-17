@@ -1,6 +1,8 @@
 ﻿# IDC4290 HW8 submission — Flight Delay Risk Explorer
 
-**App URL:** Add the public Streamlit Community Cloud URL here after deployment.
+**App URL:** Add the public Render URL here after deployment.
+
+**Source repository:** https://github.com/vdc109/idc4290-hw8-flight-delay
 
 ## What the tool does
 
@@ -8,7 +10,7 @@ The app estimates the probability that a scheduled Q1 2026 flight will arrive at
 
 ## How to use it
 
-1. Open the app URL. If Streamlit says the app is sleeping, select the option to wake it.
+1. Open the app URL. If the free service has been idle, allow about a minute for it to wake.
 2. Open **Predict a flight**. Use the prefilled example or enter a date in January–March 2026, airline, airports, scheduled local departure and arrival times, scheduled duration, and distance.
 3. Select **Estimate delay risk** and read the probability below the form.
 4. Open **Explore delays** to filter and sort historical rates. Use **Download filtered data** for a CSV.
